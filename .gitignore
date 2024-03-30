@@ -1,0 +1,5 @@
+./*.o
+.AppleDouble/
+.vscode/
+./rsg-sample-linux
+./rsg-sample-solaris

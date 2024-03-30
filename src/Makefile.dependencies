@@ -1,0 +1,7 @@
+rsg.o: rsg.cc definition.h production.h nonterminalexpansion.h test.h
+random.o: random.cc random.h
+production.o: production.cc production.h
+definition.o: definition.cc definition.h production.h random.h
+test.o: test.cc test.h definition.h production.h
+nonterminalexpansion.o: nonterminalexpansion.cc nonterminalexpansion.h \
+ definition.h production.h

@@ -41,57 +41,6 @@ static void readGrammar(ifstream& infile, map<string, Definition>& grammar) {
   }
 }
 
-// static bool isNonTerminal(string word) {
-//   return word[0] == '<';
-// }
-
-// static void printGeneratedText(vector<string> text) {
-//   for(auto word : text) {
-//     if(word[word.length()-1] == '.') cout << word << "\n\n";
-//     else 
-//       cout << word << " ";
-//   }
-//   cout << "\n";
-// }
-
-// static vector<string> expandNonTerminal(map<string, Definition> grammar, Definition nonTerminalDef) {
-//   vector<string> generatedText;
-//   Production prod = nonTerminalDef.getRandomProduction();
-//   for(auto curr = prod.begin(); curr != prod.end(); ++curr) {
-//     if(isNonTerminal(*curr)) {
-//       vector<string> expandedNonTerminal = expandNonTerminal(grammar, grammar[*curr]);
-//       generatedText.insert(generatedText.end(), expandedNonTerminal.begin(), expandedNonTerminal.end()); // appended expandedNonTerminal vector to generatedText
-//     }else {
-//       generatedText.push_back(*curr);
-//     }
-//   }
-
-//   return generatedText;
-// }
-
-// /**
-//  * Generates a random text from the given grammar by expanding first of all
-//  * the start non-terminal because all grammars must start with '<start>' non terminal
-//  * and it returns the generated text in a vector to be ready for printing.
-// */
-// static void generateARandomTextBasedOn(map<string, Definition> grammar) {
-//   vector<string> generatedText = expandNonTerminal(grammar, grammar["<start>"]);
-//   printGeneratedText(generatedText);
-// }
-
-/**
- * Performs the rudimentary error checking needed to confirm that
- * the client provided a grammar file.  It then continues to
- * open the file, read the grammar into a map<string, Definition>,
- * and then print out the total number of Definitions that were read
- * in.
- * @param argc the number of tokens making up the command that invoked
- *             the RSG executable.  There must be at least two arguments,
- *             and only the first two are used.
- * @param argv the sequence of tokens making up the command, where each
- *             token is represented as a '\0'-terminated C string.
- */
-
 int main(int argc, char *argv[]) {
   if (argc == 1) {
     cerr << "You need to specify the name of a grammar file." << endl;

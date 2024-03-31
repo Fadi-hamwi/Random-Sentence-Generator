@@ -112,7 +112,7 @@ separated from each other by some sort of white space (spaces, tabs, newlines), 
 we’re able to treat them as delimiters when parsing the grammar.
 
 ## Prerequisites
-You must have make and g++ in order to run the files of this project.
+You must have `make` and `g++` in order to run the files of this project.
 You can check if they exist by typing : 
 ``` bash
 g++ --version

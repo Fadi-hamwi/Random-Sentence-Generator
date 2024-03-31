@@ -1,4 +1,4 @@
-./*.o
+*.o
 .AppleDouble/
 .vscode/
 ./rsg-sample-linux
